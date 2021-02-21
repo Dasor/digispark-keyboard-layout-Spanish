@@ -20,7 +20,7 @@ c:\Users\(username)\AppData\Local\Arduino15\packages\digistump\hardware\avr\(ver
 # Info
 For sending special characters, such as `\[]{}@#`, I modified the `DigiKeyboard.h` write function (line ~203), so to make it send the corresponding keystroke combination.
 
-I also updated `scancode-ascii-table.h` so to map the correct keycodes to ASCII codes for the italian keyboard layout.
+Remebember you don´t need to change the `scancode-ascii-table.h` just use the default one
 
 #Resources
 
