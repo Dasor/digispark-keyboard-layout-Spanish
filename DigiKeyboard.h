@@ -202,10 +202,10 @@ class DigiKeyboardDevice : public Print {
   
   size_t write(uint8_t chr) {
     if(chr == '@') {
-      sendKeyStroke(51, MOD_ALT_RIGHT);
+      sendKeyStroke(31,MOD_ALT_RIGHT);
     }
     else if(chr == '#') {
-      sendKeyStroke(52, MOD_ALT_RIGHT);
+      sendKeyStroke(32, MOD_ALT_RIGHT);
     }
     else if(chr == '[') {
       sendKeyStroke(47, MOD_ALT_RIGHT);      
@@ -214,11 +214,35 @@ class DigiKeyboardDevice : public Print {
       sendKeyStroke(48, MOD_ALT_RIGHT);      
     }
     else if(chr == '{') {
-      sendKeyStroke(47, MOD_ALT_RIGHT | MOD_SHIFT_RIGHT);      
+      sendKeyStroke(52,MOD_ALT_RIGHT);  		  
     }
     else if(chr == '}') {
-      sendKeyStroke(48, MOD_ALT_RIGHT | MOD_SHIFT_RIGHT);
+      sendKeyStroke(50,MOD_ALT_RIGHT);
     }
+	else if(chr == '?') {
+	  sendKeyStroke(45,MOD_SHIFT_LEFT);
+	}
+	else if(chr == 0x27){// 0x27 equals '
+		sendKeyStroke(45);
+	}
+	else if(chr == '^'){
+		sendKeyStroke(47,MOD_SHIFT_LEFT);
+		sendKeyStroke(KEY_SPACE);
+	}
+	else if(chr == '+'){
+		sendKeyStroke(48);
+	}
+	else if(chr == '*'){
+		sendKeyStroke(48,MOD_SHIFT_LEFT);
+	}
+	else if(chr == '|'){
+		sendKeyStroke(30,MOD_ALT_RIGHT);
+	}
+	else if(chr == '\\'){
+		sendKeyStroke(53,MOD_ALT_RIGHT);
+	}
+	
+	
     else {
       uint8_t data = pgm_read_byte_near(ascii_to_scan_code_table + (chr - 8));
       sendKeyStroke(data & 0b01111111, data >> 7 ? MOD_SHIFT_RIGHT : 0);
