@@ -2,7 +2,7 @@
 Original files: https://github.com/digistump/DigistumpArduino/tree/master/digistump-avr/libraries/DigisparkKeyboard
 
 # Installation
-You need to place the two header files `DigiKeyboard.h` and `scancode-ascii-table.h` into the **DigisparkKeyboard** library, inside your **Arduino15** folder.
+You just need to place the the header file `DigiKeyboard.h` into the **DigisparkKeyboard** library, inside your **Arduino15** folder.
 
 ### Windows (Arduino IDE 1.6.5 and previous):
 ```
@@ -22,7 +22,6 @@ For sending special characters, such as `\[]{}@#`, I modified the `DigiKeyboard.
 
 I also updated `scancode-ascii-table.h` so to map the correct keycodes to ASCII codes for the italian keyboard layout.
 
-# References
-I used these two resources: 
-- https://github.com/PaulStoffregen/cores/blob/master/teensy/keylayouts.h
-- http://www.asciitable.com/
+#Resources
+
+This is a fork from : - https://github.com/Maiux92/digispark-keyboard-layout-italian
