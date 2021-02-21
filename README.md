@@ -1,4 +1,4 @@
-# Italian keyboard layout for Digispark DigiKeyboard
+# Spanish keyboard layout for Digispark DigiKeyboard
 Original files: https://github.com/digistump/DigistumpArduino/tree/master/digistump-avr/libraries/DigisparkKeyboard
 
 # Installation
